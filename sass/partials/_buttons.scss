@@ -1,0 +1,25 @@
+.button {
+	display: block;
+	background-color: $red;
+	padding: 0.75em;
+	text-decoration: none;
+	text-transform:uppercase;
+	letter-spacing: 0.1em;
+	color: white;
+	width: auto;
+	text-align: center;
+}
+
+a:hover .button {
+	text-decoration: none;
+	background-color: #b41e00;
+}
+
+.button a:active{
+	background-color: black;
+}
+
+.button a:visited{
+	color:white;
+	background-color:$red;
+}

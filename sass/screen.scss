@@ -1,0 +1,156 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "partials/reset";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/figures";
+@import "partials/proportional-grids";
+@import "partials/grids";
+@import "partials/navigation";
+// 
+
+// Third-party
+/*@import "vendor/_proportional-grids.scss";
+@import "vendor/jquery.ui.core";*/
+
+@media screen and (min-width: 769px){
+html, body{
+	font-size: 20pt;
+	font-family: $base-font-family;
+	background-color: $grey-lightest;
+	margin: 0;
+	font-size: 18pt;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+html, body{
+	font-family: $base-font-family;
+	background-color: $grey-lightest;
+	font-size: 18pt;
+	margin: 0;
+}
+}
+
+@media screen and (max-width: 480px){
+html, body{
+	font-size: 18pt;
+	font-family: $base-font-family;
+	background-color: $grey-lightest;
+	margin: 0;
+}
+}
+
+h1, h2, h3 {
+	font-family:$header-font-family;
+	text-align: center;
+	font-weight: $regular;
+}
+
+
+h1, h2, h3 {
+	font-family:$header-font-family;
+	text-align: center;
+	font-weight: $regular;
+}
+
+/*-----*/
+
+#container{
+	max-width:1200px;
+	margin: 0 auto;
+	background-color: white;
+	/*padding: 0.75em;*/
+}
+
+@media screen and (max-width: 480px){
+	#container{
+	max-width:inherit;
+	margin: 0 auto;
+	padding: 0 0.75em 0 0.75em;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	#container{
+	max-width:inherit;
+	margin: 0 auto;
+	padding: 0 2em 0 2em;
+}
+}
+
+.intro{
+	max-width:28em;
+	margin: 0 auto;
+	padding: 2em 0 2em 0;
+}
+
+@media screen and (max-width: 480px){
+	.intro{
+	max-width:inherit;
+}
+}
+
+/*-----------NAV-------
+
+nav  {
+	background-color: white;
+	width:auto;
+	padding: 0.0em;
+	margin-top: 0px;
+}
+
+nav ul  {
+	display: inline-block;
+	padding-left: 0px;
+	float: right;
+}
+
+nav ul li  {
+	display: inline-block;
+	margin-left: 0px;
+	padding-left: 0px;
+	position:relative;
+	left:0px;
+}
+
+@media screen and (max-width: 480px){
+nav  {
+	background-color: white;
+	width:auto;
+	padding: 0.0em;
+	margin-top: 0px;
+}
+
+nav ul  {
+	display: inline-block;
+	padding-left: 0px;
+	float: right;
+}
+
+nav ul li  {
+	display: inline-block;
+	margin-left: 0px;
+	padding-left: 0px;
+	position:relative;
+	left:0px;
+}
+
+/*------------------HERO--------------*/
+.hero{
+	clear: both;
+	width: 100%;
+	/*background-color: #00c0ff;*/
+	text-align: center;
+}
+
+.hero img{
+	width: 100%;
+}

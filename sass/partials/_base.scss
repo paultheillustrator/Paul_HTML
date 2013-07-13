@@ -1,0 +1,51 @@
+/*@import "compass";*/
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: "brandon-grotesque",sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 1em;
+$base-line-height: 1.4em;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+$header-font-family: "garamond-premier-pro-caption", serif;
+
+//Colours
+$grey-lightest: #f9f9f9;
+$grey-light: #cccccc;
+$grey-medium: #666666;
+$grey-dark: #333333;
+
+$red: #ff2a00;
+$red-dark: #b41e00;
+$blue: #00c0ff;
+$yellow: #ffea00;
+
+@import "modules/all";
+
+//Breakpoints
+/*@mixin breakpoint_mobile {@media screen and (max-width: 480px)}
+@mixin breakpoint_tablet {@media screen and (min-width: 481px) and (max-width: 768px)}
+@mixin breakpoint_desktop {@media screen and (min-width: 768px) and (max-width: 1300px)}
+@mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
+*/
+
+// Link styles
+a:link {
+	text-decoration: none;
+	color: $red;
+}
+
+a:hover {
+	margin-left: 2px;
+}
