@@ -13,7 +13,11 @@ a:link {
   color: #ff2a00; }
 
 a:hover {
-  margin-left: 2px; }
+  color: #b41e00; }
+
+a:visited {
+  text-decoration: none;
+  color: #ff2a00; }
 
 .button {
   display: block;
@@ -22,7 +26,7 @@ a:hover {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: white;
+  color: white !important;
   width: auto;
   text-align: center; }
 

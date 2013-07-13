@@ -47,5 +47,10 @@ a:link {
 }
 
 a:hover {
-	margin-left: 2px;
+	color: $red-dark;
+}
+
+a:visited{
+	text-decoration: none;
+	color: $red;
 }
