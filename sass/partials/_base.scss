@@ -18,7 +18,7 @@ $fixed-line-height: $base-line-height;
 
 // Headings
 $header-font-weight: $bold;
-$header-font-family: "garamond-premier-pro-caption", serif;
+$header-font-family: "garamond-premier-pro",sans-serif;
 
 //Colours
 $grey-lightest: #f9f9f9;
@@ -30,6 +30,10 @@ $red: #ff2a00;
 $red-dark: #b41e00;
 $blue: #00c0ff;
 $yellow: #ffea00;
+
+
+//Padding
+$padding-bp1: 1em;
 
 @import "modules/all";
 

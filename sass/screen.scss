@@ -63,15 +63,18 @@ h1, h2, h3 {
 
 /*-----*/
 
-#container{
+.container{
 	max-width:1200px;
 	margin: 0 auto;
+	padding: $padding-bp1;
+}
+
+.white-bg {
 	background-color: white;
-	/*padding: 0.75em;*/
 }
 
 @media screen and (max-width: 480px){
-	#container{
+	.container{
 	max-width:inherit;
 	margin: 0 auto;
 	padding: 0 0.75em 0 0.75em;
@@ -79,7 +82,7 @@ h1, h2, h3 {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
-	#container{
+	.container{
 	max-width:inherit;
 	margin: 0 auto;
 	padding: 0 2em 0 2em;
@@ -153,4 +156,19 @@ nav ul li  {
 
 .hero img{
 	width: 100%;
+}
+
+/*------------------FEATURE PANEL--------------*/
+.feature{
+	clear: both;
+	width: 100%;
+	/*background-color: #00c0ff;*/
+	text-align: center;
+
+}
+
+.blue-bg{
+	background-color: $blue;
+	color: white;
+	padding:$padding-bp1 0 $padding-bp1 0;
 }
