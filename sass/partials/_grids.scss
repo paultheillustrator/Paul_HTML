@@ -1,24 +1,25 @@
 //WIDTHS
 
 .bp1{
-
 }
 
 
 .grid-wrap {
-	margin-left: -2em;
+	margin-left: -1em;
     overflow: hidden;
     clear: both;
+    padding-bottom: $padding-bp1;
 } 
 
 .grid-col {
 	float:left;
     text-align: left;
-	padding-left: 2em; /* this is your gutter between columns */
+	padding-left: 1em; /* this is your gutter between columns */
     width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box; 
+    padding-bottom: 1em;
 }
 
 .grid-col img{
@@ -31,6 +32,7 @@
     margin-left: -1.5em;
     overflow: hidden;
     clear: both;
+    padding-bottom: $padding-bp2;
 } 
 
     .grid-col {
@@ -51,6 +53,7 @@
     margin-left: -1em;
     overflow: hidden;
     clear: both;
+    padding-bottom: $padding-bp3;
 } 
     .grid-col img{
 	width: 100%;

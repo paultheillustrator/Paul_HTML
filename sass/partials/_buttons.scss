@@ -1,25 +1,32 @@
+@import "partials/base";
+
 .button {
 	display: block;
 	background-color: $red;
+	color: white !important;
 	padding: 0.75em;
 	text-decoration: none;
 	text-transform:uppercase;
 	letter-spacing: 0.1em;
-	color: white !important;
 	width: auto;
 	text-align: center;
+	font-weight:700;
+	max-width:10em;
+	margin: 0 auto;
+	/*@include cool-shadow-black;*/
+
 }
 
-a:hover .button {
+.button:hover {
 	text-decoration: none;
 	background-color: #b41e00;
 }
 
-.button a:active{
+.button:active{
 	background-color: black;
 }
 
 .button a:visited{
 	color:white;
-	background-color:$red;
+	/*background-color:$red;*/
 }

@@ -22,11 +22,10 @@
 
 @media screen and (min-width: 769px){
 html, body{
-	font-size: 20pt;
+	font-size: 1.25em;
 	font-family: $base-font-family;
 	background-color: $grey-lightest;
 	margin: 0;
-	font-size: 18pt;
 }
 }
 
@@ -34,14 +33,14 @@ html, body{
 html, body{
 	font-family: $base-font-family;
 	background-color: $grey-lightest;
-	font-size: 18pt;
+	font-size: $base-font-size;
 	margin: 0;
 }
 }
 
 @media screen and (max-width: 480px){
 html, body{
-	font-size: 18pt;
+	font-size: $base-font-size;
 	font-family: $base-font-family;
 	background-color: $grey-lightest;
 	margin: 0;
@@ -77,7 +76,8 @@ h1, h2, h3 {
 	.container{
 	max-width:inherit;
 	margin: 0 auto;
-	padding: 0 0.75em 0 0.75em;
+	/*padding: 0 0.75em 0 0.75em;*/
+	padding: $padding-bp3;
 }
 }
 
@@ -85,19 +85,21 @@ h1, h2, h3 {
 	.container{
 	max-width:inherit;
 	margin: 0 auto;
-	padding: 0 2em 0 2em;
+	padding: $padding-bp2;
 }
 }
 
 .intro{
 	max-width:28em;
 	margin: 0 auto;
-	padding: 2em 0 2em 0;
+	/*padding: 2em 0 2em 0;*/
+	padding-bottom: $padding-bp1;
 }
 
 @media screen and (max-width: 480px){
 	.intro{
 	max-width:inherit;
+	padding-bottom: $padding-bp3;
 }
 }
 
@@ -170,5 +172,21 @@ nav ul li  {
 .blue-bg{
 	background-color: $blue;
 	color: white;
-	padding:$padding-bp1 0 $padding-bp1 0;
+	/*padding:$padding-bp1 0 $padding-bp1 0;*/
+}
+
+.grey-bg {
+	background-color: $grey-dark;
+	color: $grey-lightest;
+	/*padding:$padding-bp1 0 $padding-bp1 0;*/
+}
+
+/*-----------READ MORE BUTTON -----------*/
+#read-more{
+	position:fixed;
+	bottom:0;
+	padding: 2em;
+	background-color: $grey-dark;
+	text-align: center;
+	color: white;
 }

@@ -33,6 +33,7 @@ audio:not([controls]) {
 
 .block {
   position: relative;
+
   margin: 0 auto;
   padding: 0.2em 0.2em;
   /*max-width: 60em;*/
@@ -99,10 +100,14 @@ audio:not([controls]) {
 
 #nav {
   z-index: 200;
-  position: relative;
+  position: absolute;
+  top:0;
   overflow: hidden;
   width: 100%;
   color: #fff;
+  text-transform:none;
+  font-weight: 400;
+  font-size: $base-font-size-micro;
 }
 #nav .close-btn {
   display: none;
@@ -121,7 +126,7 @@ audio:not([controls]) {
   z-index: 2;
   position: relative;
   /*padding: 0.75em 1.25em;*/
-  background: #333333;
+  background: #fff;
 }
 #nav ul {
   *zoom: 1;
@@ -139,22 +144,22 @@ audio:not([controls]) {
 }
 #nav li a {
   display: block;
-  color: #ccc;
+  color: #999;
   outline: none;
 }
 #nav li a:focus, #nav li a:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color: #333;
+  /*background: rgba(255, 255, 255, 0.1);*/
 }
 #nav li.is-active a {
-  color: #fff;
+  color: #333;
 }
 
 #top {
   z-index: 100;
   position: relative;
-  color: #fff;
-  background: #333333;
+  color: #333;
+  background: #fff;
 }
 #top .block-title {
   margin: 0;
@@ -215,6 +220,10 @@ footer[role="contentinfo"] {
   #nav ul {
     text-align: center;
     white-space: nowrap;
+    float: right;
+    position: relative;
+    top:0;
+    right:0;
   }
   #nav li {
     display: inline-block;

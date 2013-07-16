@@ -6,9 +6,11 @@ $regular: 400;
 $bold: 600;
 
 // Base Font
-$base-font-family: "brandon-grotesque",sans-serif;
+$base-font-family-sans: "brandon-grotesque",sans-serif;
+$base-font-family: "garamond-premier-pro",sans-serif;
 $base-font-weight: $regular;
-$base-font-size: 1em;
+$base-font-size: 16pt;
+$base-font-size-micro: 0.75em;
 $base-line-height: 1.4em;
 
 // Fixed Font
@@ -18,7 +20,8 @@ $fixed-line-height: $base-line-height;
 
 // Headings
 $header-font-weight: $bold;
-$header-font-family: "garamond-premier-pro",sans-serif;
+$header-font-family-serif: "garamond-premier-pro",sans-serif;
+$header-font-family: "brandon-grotesque",sans-serif;
 
 //Colours
 $grey-lightest: #f9f9f9;
@@ -33,7 +36,15 @@ $yellow: #ffea00;
 
 
 //Padding
-$padding-bp1: 1em;
+$padding-bp1: 3em;
+$padding-bp2: 2em;
+$padding-bp3: 0.75em;
+
+//Drop shadows
+$hover-color:blue;
+$basic-color:black;
+@mixin cool-shadow-black{box-shadow: 15px 15px 0 $basic-color, 14px 14px 0 $basic-color, 13px 13px 0 $basic-color, 12px 12px 0 $basic-color, 11px 11px 0 $basic-color, 10px 10px 0 $basic-color, 9px 9px 0 $basic-color, 8px 8px 0 $basic-color, 7px 7px 0 $basic-color, 6px 6px 0 $basic-color, 5px 5px 0 $basic-color, 4px 4px 0 $basic-color, 3px 3px 0 $basic-color, 2px 2px 0 $basic-color, 1px 1px 0 $basic-color;}
+@mixin cool-shadow-black-hover{box-shadow: 15px 15px 0 $hover-color, 14px 14px 0, 13px 13px 0, 12px 12px 0, 11px 11px 0, 10px 10px 0, 9px 9px 0, 8px 8px 0, 7px 7px 0, 6px 6px 0, 5px 5px 0, 4px 4px 0, 3px 3px 0, 2px 2px 0, 1px 1px 0;}
 
 @import "modules/all";
 
@@ -52,9 +63,9 @@ a:link {
 
 a:hover {
 	color: $red-dark;
+	text-decoration: underline;
 }
 
 a:visited{
-	text-decoration: none;
 	color: $red;
 }
