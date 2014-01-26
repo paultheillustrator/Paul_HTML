@@ -12,7 +12,6 @@
 	<script scr="js/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/evz6ssi.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 	<!-- Apple Touch icons -->
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 	<link rel="apple-touch-icon" sizes="57x57" href="images/touch_icons/apple-touch-icon-57x57.png" />
@@ -28,41 +27,49 @@
     <meta name="msapplication-square150x150logo" content="images/touch_icons/mediumtile.png" />
     <meta name="msapplication-wide310x150logo" content="images/touch_icons/widetile.png" />
     <meta name="msapplication-square310x310logo" content="images/touch_icons/largetile.png" />
-
-    <script type="text/javascript">
-    	function rotateEvery(sec)
-			{
-				var Quotation=new Array()
-
-				// QUOTATIONS
-				Quotation[0] = 'Wanker';
-				Quotation[1] = 'Procrasternator';
-				Quotation[2] = 'Designer';
-				Quotation[3] = 'Dribbler';
-				Quotation[4] = 'Pizza eater';
-				Quotation[5] = 'Lord of space';
-
-				var which = Math.round(Math.random()*(Quotation.length - 1));
-				document.getElementById('giant').innerHTML = Quotation[which];
-				
-				setTimeout('rotateEvery('+sec+')', sec*2000);
-			}
-    </script>
-
 </head>
-<body onload="rotateEvery(1)">
+<body>
+
+	<div id="outer-wrap">
+	<div id="inner-wrap">
+	<!--
+		<header id="top" role="banner">
+	        <div class="block">
+	            <h3 class="site-logo">Paul</h3>
+	            <a class="nav-btn" id="nav-open-btn" href="#nav">Book Navigation</a>
+	        </div>
+	 	</header>
+
+		
+		<nav id="nav" role="navigation">
+	        <div class="block">
+	            <ul>
+	                <li class="is-active">
+	                    <a href="#">About</a>
+	                </li>
+	             	<li>
+	                    <a href="#">Blog</a>
+	                </li>
+	             	<li>
+	                    <a href="#">Twitter</a>
+	                </li>
+	            </ul>
+	            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+	        </div>
+	    </nav><!-- End nav -->
+
 	    <div id="landing_wrap">
-			<div class="hero fadeInUp">
+			<div class="hero">
 				<img src="./images/hero-01.png">
-				<h1 id="giant"></h1>
+				<h1 id="giant">The Bollox</h1>
 			</div><!-- End hero -->
 		</div><!-- End landing_wrap -->
 
-		<div class="center upAndDown">
-			<div id="read-more">
-				More bollox
-			</div>
+		<!--
+		<div id="read-more">
+			More bollox
 		</div>
+		-->
 
 		<div class="container no-bg">
 				<h1>Recent projects</h1>
@@ -97,6 +104,13 @@
 					<h2></h2>
 					What do 141 graduating students across 6 different creative courses have in common? How can a single identity and catalogue represent the diversity of the DIT School of Art, Design and Printing graduating class of 2010? 
 				</div>
+		</div><!-- End container white-bg -->
+
+		<div class="intro-hold">
+					<h1>Safety first</h1>
+					Conventional wisdom, UX patterns and even my grandmother have suggested that it is bad practice to put waffle such as this very text prior to showing actual design work. To carefully avoid this confusing situation, I have decided to avoid putting any work whatsoever onto my portfolio website, hence avoiding any potential danger of disorientation, serious injury or losing a bollock.
+					<br><br>	
+					<a href="mailto:hello@paulthedesigner.ie" class="button">FUCK OFF</a>
 		</div><!-- End container white-bg -->
 
 		<div class="container white-bg">
@@ -190,11 +204,14 @@
 					</div>
 				</div><!-- End container -->
 			</div><!-- End feature grey-bg -->
+
+	</div><!-- End inner_wrap -->
+	</div><!-- End outer_wrap -->
 <script src="js/main.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
  	<script src="js/jquery.fittext.js"></script>
 	<script type="text/javascript">
-		$("#giant").fitText(1.1, { minFontSize: '50px', maxFontSize: '300px' });
+		$("#giant").fitText(1.1, { minFontSize: '50px', maxFontSize: '320px' });
 	</script>
 
 </body>

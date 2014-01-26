@@ -7,6 +7,11 @@
 @mixin breakpoint_desktop {@media screen and (min-width: 768px) and (max-width: 1300px)}
 @mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
 */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 a:link {
   text-decoration: none;
   color: #ff2a00; }
@@ -136,6 +141,11 @@ h4 {
 @mixin breakpoint_desktop {@media screen and (min-width: 768px) and (max-width: 1300px)}
 @mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
 */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 a:link {
   text-decoration: none;
   color: #ff2a00; }
@@ -267,6 +277,11 @@ a:visited {
 @mixin breakpoint_desktop {@media screen and (min-width: 768px) and (max-width: 1300px)}
 @mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
 */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 a:link {
   text-decoration: none;
   color: #ff2a00; }
@@ -638,7 +653,13 @@ footer[role="contentinfo"] {
   animation-timing-function: ease-in-out;
   -webkit-animation: fadeInUp 1.3s;
   /* Safari and Chrome */
-  -webkit-animation-timing-function: ease-out; }
+  -webkit-animation-timing-function: ease-out;
+  animation-delay: 1s;
+  opacity: 0;
+  -webkit-animation: fadeInUp 0.5s ease 0.5s forwards;
+  -moz-animation: fadeInUp 0.5s ease 0.5s forwards;
+  -o-animation: fadeInUp 0.5s ease 0.5s forwards;
+  animation: fadeInUp 0.5s ease 0.5s forwards; }
 
 @keyframes fadeInUp {
   0% {
@@ -657,6 +678,58 @@ footer[role="contentinfo"] {
   100% {
     opacity: 1;
     margin-top: 0; } }
+
+.upAndDown {
+  animation: upAndDown 2s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: upAndDown 1.3s infinite;
+  /* Safari and Chrome */ }
+
+@keyframes upAndDown {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes upAndDown {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+.upAndDown {
+  animation: upAndDown 2s infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: upAndDown 1.3s infinite;
+  /* Safari and Chrome */ }
+
+@keyframes upAndDown {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes upAndDown {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
 
 .centered {
   height: 100%;
@@ -754,27 +827,39 @@ h1, h2, h3 {
 #landing_wrap {
   width: 100%;
   height: 100%;
-  background-color: #ff2a00; }
+  background-color: #ff2a00;
+  background-size: cover;
+  display: table;
+  position: relative; }
 
 /*------------------HERO--------------*/
 .hero {
   clear: both;
   width: 100%;
   /*background-color: #00c0ff;*/
-  text-align: center; }
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative; }
 
 .hero img {
   width: 60%; }
 
-@media screen and (max-height: 800px) and (min-height: 0px) {
+@media screen and (max-height: 800px) and (min-height: 0px) and (max-width: 1599px) {
   .hero img {
     width: 60%; } }
+@media screen and (min-height: 1600px) {
+  .hero img {
+    width: 40%; } }
 @media screen and (max-width: 480px) {
   .hero img {
     width: 100%!important; } }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .hero img {
     width: 100%!important; } }
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  .hero img {
+    width: 80%!important; } }
 /*------------------FEATURE PANEL--------------*/
 .feature {
   clear: both;
@@ -799,10 +884,12 @@ h1, h2, h3 {
 #read-more {
   position: fixed;
   bottom: 0;
-  padding: 2em;
-  background-color: #333333;
-  text-align: center;
-  color: white; }
+  display: block;
+  text-indent: -9999px;
+  background: url(../images/svg/down-arrow.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  left: 49%; }
 
 /*------- BACKGROUND IMAGE ------*/
 img.bg {

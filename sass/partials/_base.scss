@@ -62,6 +62,14 @@ $basic-color:black;
 @mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
 */
 
+// Helpers
+
+.center{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
 // Link styles
 a:link {
 	text-decoration: none;

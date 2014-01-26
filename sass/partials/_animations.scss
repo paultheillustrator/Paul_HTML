@@ -1,10 +1,17 @@
 // Animations
 
+// Fade in Up
 .fadeInUp{
 animation:fadeInUp 1.3s;
 animation-timing-function: ease-in-out;
 -webkit-animation:fadeInUp 1.3s; /* Safari and Chrome */
 -webkit-animation-timing-function: ease-out;
+animation-delay:1s;
+    opacity: 0;
+    -webkit-animation: fadeInUp 0.5s ease 0.5s forwards;
+	-moz-animation: fadeInUp 0.5s ease 0.5s forwards;
+	-o-animation: fadeInUp 0.5s ease 0.5s forwards;
+	animation: fadeInUp 0.5s ease 0.5s forwards;
 }
 
 @keyframes fadeInUp
@@ -19,3 +26,46 @@ animation-timing-function: ease-in-out;
 100% {opacity: 1;  margin-top: (0);}
 }
 
+//Up and Down
+
+.upAndDown{
+animation:upAndDown 2s infinite;
+animation-timing-function: ease-in-out;
+-webkit-animation:upAndDown 1.3s infinite; /* Safari and Chrome */
+}
+
+@keyframes upAndDown
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@-webkit-keyframes upAndDown /* Safari and Chrome */
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+//Rotation
+
+.upAndDown{
+animation:upAndDown 2s infinite;
+animation-timing-function: ease-in-out;
+-webkit-animation:upAndDown 1.3s infinite; /* Safari and Chrome */
+}
+
+@keyframes upAndDown
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@-webkit-keyframes upAndDown /* Safari and Chrome */
+{
+0% {opacity: 0;}
+50% {opacity: 1;}
+100% {opacity: 0;}
+}
