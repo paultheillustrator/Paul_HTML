@@ -14,15 +14,25 @@
 @import "partials/proportional-grids";
 @import "partials/grids";
 @import "partials/navigation";
+@import "partials/link_styles";
+@import "partials/animations";
+@import "partials/mixins";
+@import "partials/_holding_page";
 // 
 
 // Third-party
 /*@import "vendor/_proportional-grids.scss";
 @import "vendor/jquery.ui.core";*/
 
+html, body{
+	line-height: $base-line-height;
+	letter-spacing: $base-letter-spacing;
+	color: $base-font-color;
+	height:100%;
+}
+
 @media screen and (min-width: 769px){
 html, body{
-	font-size: 1.25em;
 	font-family: $base-font-family;
 	background-color: $grey-lightest;
 	margin: 0;
@@ -33,7 +43,6 @@ html, body{
 html, body{
 	font-family: $base-font-family;
 	background-color: $grey-lightest;
-	font-size: $base-font-size;
 	margin: 0;
 }
 }
@@ -90,7 +99,7 @@ h1, h2, h3 {
 }
 
 .intro{
-	max-width:28em;
+	max-width:25em;
 	margin: 0 auto;
 	/*padding: 2em 0 2em 0;*/
 	padding-bottom: $padding-bp1;
@@ -103,51 +112,12 @@ h1, h2, h3 {
 }
 }
 
-/*-----------NAV-------
-
-nav  {
-	background-color: white;
-	width:auto;
-	padding: 0.0em;
-	margin-top: 0px;
+/*-----------LANDING WRAP ------------*/
+#landing_wrap{
+	width: 100%;
+	height: 100%;
+	background-color: $red;
 }
-
-nav ul  {
-	display: inline-block;
-	padding-left: 0px;
-	float: right;
-}
-
-nav ul li  {
-	display: inline-block;
-	margin-left: 0px;
-	padding-left: 0px;
-	position:relative;
-	left:0px;
-}
-
-@media screen and (max-width: 480px){
-nav  {
-	background-color: white;
-	width:auto;
-	padding: 0.0em;
-	margin-top: 0px;
-}
-
-nav ul  {
-	display: inline-block;
-	padding-left: 0px;
-	float: right;
-}
-
-nav ul li  {
-	display: inline-block;
-	margin-left: 0px;
-	padding-left: 0px;
-	position:relative;
-	left:0px;
-}
-
 /*------------------HERO--------------*/
 .hero{
 	clear: both;
@@ -157,7 +127,25 @@ nav ul li  {
 }
 
 .hero img{
-	width: 100%;
+	width: 60%;
+}
+
+@media screen and (max-height: 800px) and(min-height: 0px){
+	.hero img{
+	width: 60%;
+}
+}
+
+@media screen and (max-width: 480px){
+	.hero img{
+	width: 100%!important;
+}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	.hero img{
+	width: 100%!important;
+}	
 }
 
 /*------------------FEATURE PANEL--------------*/
@@ -181,6 +169,10 @@ nav ul li  {
 	/*padding:$padding-bp1 0 $padding-bp1 0;*/
 }
 
+.no-bg{
+	background-color: none!important;
+} 
+
 /*-----------READ MORE BUTTON -----------*/
 #read-more{
 	position:fixed;
@@ -190,3 +182,27 @@ nav ul li  {
 	text-align: center;
 	color: white;
 }
+
+/*------- BACKGROUND IMAGE ------*/
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+/*****/

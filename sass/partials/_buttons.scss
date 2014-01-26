@@ -1,9 +1,11 @@
+// Buttons
+
 @import "partials/base";
 
 .button {
 	display: block;
-	background-color: $red;
-	color: white !important;
+	font-family: $header-font-family;
+	color: black !important;
 	padding: 0.75em;
 	text-decoration: none;
 	text-transform:uppercase;
@@ -13,20 +15,26 @@
 	font-weight:700;
 	max-width:10em;
 	margin: 0 auto;
+	border: 0.22em solid black;
+	background-color: white;
 	/*@include cool-shadow-black;*/
+	border-radius: 2px;
 
 }
 
 .button:hover {
 	text-decoration: none;
-	background-color: #b41e00;
+	/*background-color: #b41e00;*/
+	border: 0.22em solid $red;
+	color:$red !important;
+	background-color: white;
 }
 
 .button:active{
-	background-color: black;
+	/*background-color: black;*/
 }
 
 .button a:visited{
-	color:white;
+	color:black;
 	/*background-color:$red;*/
 }
