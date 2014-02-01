@@ -69,3 +69,43 @@ animation-timing-function: ease-in-out;
 50% {opacity: 1;}
 100% {opacity: 0;}
 }
+
+.pulse{
+animation:pulse 2s infinite;
+animation-timing-function: ease-in-out;
+-webkit-animation:pulse 1.3s infinite; /* Safari and Chrome */
+}
+
+@keyframes pulse
+{
+0% {height: auto; width:60%;}
+50% {height: auto; width:85%;}
+100% {height: auto; width:60%;}
+}
+
+@-webkit-keyframes pulse /* Safari and Chrome */
+{
+0% {height: auto; width:60%;}
+50% {height: auto; width:85%;}
+100% {height: auto; width:60%;}
+}
+
+.popIn{
+animation:popIn 2s infinite;
+animation-timing-function: ease-in-out;
+-webkit-animation:popIn 1s; /* Safari and Chrome */
+}
+
+@keyframes popIn
+{
+0% {height: auto; width:0%; -webkit-filter: blur(10px);}
+80% {height: auto; width:85%; -webkit-filter: blur(10px);}
+100% {height: auto; width:60%; -webkit-filter: blur(0px);}
+}
+
+@-webkit-keyframes popIn /* Safari and Chrome */
+{
+0% {height: auto; width:0%; -webkit-filter: blur(10px);}
+80% {height: auto; width:85%; -webkit-filter: blur(10px);}
+100% {height: auto; width:60%; -webkit-filter: blur(0px);}
+}

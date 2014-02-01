@@ -1,84 +1,295 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
-    <title>Card 2 - slide flip &middot; Intro to CSS 3D transforms &rsaquo; Examples</title>
+<!--[if lt IE 8]><html class="lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Paul Woods | Designer and illustrator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="js/modernizr.js"></script>
+  <script scr="js/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/evz6ssi.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<style>
-#f1_container {
-  position: relative;
-  margin: 10px auto;
-  width: 450px;
-  height: 281px;
-  z-index: 1;
-}
-#f1_container {
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -o-perspective: 1000px;
-  perspective: 1000px;
-}
-#f1_card {
-  width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: all 1.0s linear;
-  -moz-transform-style: preserve-3d;
-  -moz-transition: all 1.0s linear;
-  -o-transform-style: preserve-3d;
-  -o-transition: all 1.0s linear;
-  transform-style: preserve-3d;
-  transition: all 1.0s linear;
-}
-#f1_container:hover #f1_card, #f1_container.hover_effect #f1_card {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  <!-- Apple Touch icons -->
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/touch_icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch_icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch_icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch_icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/touch_icons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/touch_icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/touch_icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/touch_icons/apple-touch-icon-152x152.png" />
+    <!-- Windows 8 Tile Icons -->
+    <meta name="msapplication-square70x70logo" content="images/touch_icons/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="images/touch_icons/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="images/touch_icons/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="images/touch_icons/largetile.png" />
 
-  -webkit-box-shadow: -5px 5px 5px #aaa;
-  -moz-box-shadow: -5px 5px 5px #aaa;
-  box-shadow: -5px 5px 5px #aaa;
-}
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.face.back {
-  display: block;
-  -webkit-transform: rotateY(180deg);
-  -webkit-box-sizing: border-box;
-  -moz-transform: rotateY(180deg);
-  -moz-box-sizing: border-box;
-  -o-transform: rotateY(180deg);
-  -o-box-sizing: border-box;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  background-color: #aaa;
-}
-</style>
+    <script type="text/javascript">
+      function rotateEvery(sec)
+      {
+        var Quotation=new Array()
 
-  </head>
-  <body>
-    <div id="f1_container">
-    <div id="f1_card" class="shadow">
-      <div class="front face">
-        <img src="/images/Cirques.jpg"/>
-      </div>
-      <div class="back face center">
-        <p>This is nice for exposing more information about an image.</p>
-        <p>Any content can go here.</p>
+        // QUOTATIONS
+        Quotation[0] = 'Wanker';
+        Quotation[1] = 'Procrasternator';
+        Quotation[2] = 'Designer';
+        Quotation[3] = 'Dribbler';
+        Quotation[4] = 'Pizza eater';
+        Quotation[5] = 'Lord of space';
+
+        var which = Math.round(Math.random()*(Quotation.length - 1));
+        document.getElementById('giant').innerHTML = Quotation[which];
+        
+        setTimeout('rotateEvery('+sec+')', sec*2000);
+      }
+    </script>
+    <style>
+      .pt-perspective {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          perspective: 1200px;
+          transform-style: preserve-3d;
+      }
+       
+      .pt-page {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          visibility: hidden;
+          overflow: hidden;
+          backface-visibility: hidden;
+          transform: translate3d(0, 0, 0);
+      }
+       
+      .pt-page-current,
+      .no-js .pt-page {
+          visibility: visible;
+      }
+       
+      .no-js body {
+          overflow: auto;
+      }
+       
+      .pt-page-ontop {
+          z-index: 999;
+      }
+
+      /* scale and fade */
+ 
+.pt-page-scaleDown {
+    animation: scaleDown .7s ease both;
+}
+ 
+.pt-page-scaleUp {
+    animation: scaleUp .7s ease both;
+}
+ 
+.pt-page-scaleUpDown {
+    animation: scaleUpDown .5s ease both;
+}
+ 
+.pt-page-scaleDownUp {
+    animation: scaleDownUp .5s ease both;
+}
+ 
+.pt-page-scaleDownCenter {
+    animation: scaleDownCenter .4s ease-in both;
+}
+ 
+.pt-page-scaleUpCenter {
+    animation: scaleUpCenter .4s ease-out both;
+}
+ 
+/************ keyframes ************/
+ 
+/* scale and fade */
+ 
+@keyframes scaleDown {
+    to { opacity: 0; transform: scale(.8); }
+}
+ 
+@keyframes scaleUp {
+    from { opacity: 0; transform: scale(.8); }
+}
+ 
+@keyframes scaleUpDown {
+    from { opacity: 0; transform: scale(1.2); }
+}
+ 
+@keyframes scaleDownUp {
+    to { opacity: 0; transform: scale(1.2); }
+}
+ 
+@keyframes scaleDownCenter {
+    to { opacity: 0; transform: scale(.7); }
+}
+ 
+@keyframes scaleUpCenter {
+    from { opacity: 0; transform: scale(.7); }
+    </style>
+</head>
+<body onload="rotateEvery(1)">
+  <div id="pt-main" class="pt-perspective">
+    <div class="pt-page pt-page-1">
+        <div id="landing_wrap">
+        <div class="hero fadeInUp">
+          <img src="./images/hero-01.png">
+          <h1 id="giant"></h1>
+        </div><!-- End hero -->
+      </div><!-- End landing_wrap -->
+    </div>
+    <div class="pt-page pt-page-2">
+    <!-- ... -->
+</div>
+
+
+    <div class="center upAndDown">
+      <div id="read-more">
+        More bollox
       </div>
     </div>
-    </div>
-  </body>
+
+    <div class="container no-bg">
+        <h1>Recent projects</h1>
+        <div class="grid-wrap">
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_partnerships_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_rbma_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_mine_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_design-thinking_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_calendar_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_warmups_thumb.jpg">
+          </div>
+        </div><!-- End grid-col three-up -->
+    </div><!-- End container no-bg -->
+
+
+    <div class="container white-bg">
+        <h1>Type styles</h1>
+        <div class="grid-wrap">
+          <h1></h1>
+          Partnerships
+          <h2></h2>
+          What do 141 graduating students across 6 different creative courses have in common? How can a single identity and catalogue represent the diversity of the DIT School of Art, Design and Printing graduating class of 2010? 
+        </div>
+    </div><!-- End container white-bg -->
+
+    <div class="container white-bg">
+        <h1>Intro block</h1>
+        <article class="intro">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit eu magna eget imperdiet. Mauris rhoncus pretium laoreet. Donec pharetra metus arcu, vel pretium nisi venenatis id. Vestibulum molestie purus sed mi tristique. <a href="#">Here is a link within a passage of text</a> ullamcorper turpis bibendum. Maecenas vitae nulla dui. Donec vestibulum purus justo, sit amet volutpat sapien tristique id. Aliquam luctus purus quis fringilla placerat. Fusce id nisl non magna accumsan adipiscing. Mauris tincidunt semper nisl, nec molestie enim auctor euismod. Donec blandit libero ac est dictum mollis. Proin vel pulvinar arcu. Aenean vehicula a augue nec mattis. Sed tempor tortor tortor, non accumsan quam dictum luctus.
+          <br><br>  
+          <a href="#" class="button">View work</a>
+        </article>
+
+        <h1>Three-up grid</h1>
+        <div class="grid-wrap">
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_partnerships_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_rbma_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_mine_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_design-thinking_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_calendar_thumb.jpg">
+          </div>
+          <div class="grid-col three-up">
+                <img src="images/projects/thumbs/project_warmups_thumb.jpg">
+          </div>
+        </div><!-- End grid-col three-up -->
+
+        <h1>Four-up grid</h1>
+        <div class="grid-wrap">
+          <div class="grid-col four-up">
+                <img src="images/projects/thumbs/project_partnerships_thumb.jpg">
+          </div>
+          <div class="grid-col four-up">
+                <img src="images/projects/thumbs/project_rbma_thumb.jpg">
+          </div>
+          <div class="grid-col four-up">
+                <img src="images/projects/thumbs/project_mine_thumb.jpg">
+          </div>
+          <div class="grid-col four-up">
+                <img src="images/projects/thumbs/project_design-thinking_thumb.jpg">
+          </div>
+        </div><!-- End grid-wrap -->
+
+        <h1>Two-up grid</h1>
+        <div class="grid-wrap">
+          <div class="grid-col two-up">
+                <img src="../images/projects/thumbs/project_toon-bros_thumb.jpg">
+                <h4>Text under picture</h4>
+          </div>
+          <div class="grid-col two-up">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit eu magna eget imperdiet. Mauris rhoncus pretium laoreet. Donec pharetra metus arcu, vel pretium nisi venenatis id. Vestibulum molestie purus sed mi tristique.
+          </div>
+        </div>
+      </div>
+
+      <div class="feature blue-bg">
+        <div class="container">
+          <h1>Feature panel</h1>
+          <div class="grid-wrap">
+            <div class="grid-col two-up">
+                  <img src="http://placehold.it/400x300">
+            </div>
+            <div class="grid-col two-up">
+                <p>What do 141 graduating students across 6 different creative courses have in common? How can a single identity and catalogue represent the diversity of the DIT School of Art, Design and Printing graduating class of 2010?</p>
+
+                <h4>The concept</h4>
+                The common denominator? The creative process. The concept behind this years design was to use information graphics to express ‘the science’ of the students’ creative processes. We interviewed all 147 students from the school about their personal creative process. The results from the survey were compiled and the data was used to build information graphics on creativity. These graphics were used to divide the catalogue for the sections on each respective course. 
+            </div>
+          </div>
+        </div><!-- End container -->
+      </div><!-- End feature blue-bg -->
+
+      <div class="feature grey-bg">
+        <div class="container">
+          <h1>Feature panel</h1>
+          <div class="grid-wrap">
+            <div class="grid-col two-up">
+                  <img src="http://placehold.it/400x300">
+            </div>
+            <div class="grid-col two-up">
+                <p>What do 141 graduating students across 6 different creative courses have in common? How can a single identity and catalogue represent the diversity of the DIT School of Art, Design and Printing graduating class of 2010?</p>
+
+                <h4>The concept</h4>
+                The common denominator? The creative process. The concept behind this years design was to use information graphics to express ‘the science’ of the students’ creative processes. We interviewed all 147 students from the school about their personal creative process. The results from the survey were compiled and the data was used to build information graphics on creativity. These graphics were used to divide the catalogue for the sections on each respective course.  
+            </div>
+          </div>
+        </div><!-- End container -->
+      </div><!-- End feature grey-bg -->
+      <!-- ... --></div>
+<script src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script type="text/javascript">
+    $("#giant").fitText(1.1, { minFontSize: '50px', maxFontSize: '300px' });
+  </script>
+
+</body>
 </html>
