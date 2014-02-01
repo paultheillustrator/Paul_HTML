@@ -144,7 +144,13 @@ h1, h2, h3 {
 }
 }
 
-@media screen and (min-height: 1600px){
+@media screen and (min-width: 2000px){
+	.hero img{
+	width: 50%;
+}
+}
+
+@media screen and (min-width: 2200px){
 	.hero img{
 	width: 40%;
 }
