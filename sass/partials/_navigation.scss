@@ -1,18 +1,27 @@
 // Modules and Variables
 @import "partials/base";
 nav {
-  position: absolute;
+  position: fixed;
   right: 2em;
+  z-index: 2;
 }
 
 nav ul{
-   list-style: none;
-}
-nav li a {
-  border-left: 1px solid $grey-light;
-  color: $grey-medium!important;
 }
 
-nav li:first-child a {
+nav li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid $grey-light;
+}
+
+nav li:first-child  {
     border-left: 0 none;
+}
+
+nav li a {
+  font-size: $base-font-size;
+    color: $grey-medium!important;
 }

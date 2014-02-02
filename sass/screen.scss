@@ -233,4 +233,27 @@ img.bg {
     margin-left: -512px;   /* 50% */
   }
 }
-/*****/
+
+/* ---------- About ------------ */
+.about{
+	background-color: $red;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	color: white;
+}
+
+.about a{
+	color:white!important;
+}
+
+.show{
+	visibility:visible!important;
+}
+
+.hide{
+	visibility:hidden;
+}
+
+/******/
