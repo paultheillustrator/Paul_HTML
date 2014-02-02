@@ -190,7 +190,13 @@ h1, h2, h3 {
 }
 
 .grey-bg {
-	background-color: $grey-dark;
+	background-color: $grey-darkest;
+	color: $grey-light;
+	/*padding:$padding-bp1 0 $padding-bp1 0;*/
+}
+
+
+.grey-bg h1{
 	color: $grey-lightest;
 	/*padding:$padding-bp1 0 $padding-bp1 0;*/
 }
@@ -236,18 +242,18 @@ img.bg {
 
 /* ---------- About ------------ */
 .about{
-	background-color: black;
+	background-color: $red;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: 3;
 	color: white;
-	opacity: 0.90;
+	opacity: 0.97;
 	font-size: 120%;
 }
 
 .about a{
-	/*color: black!important;*/
+	color: black!important;
 }
 
 .show{

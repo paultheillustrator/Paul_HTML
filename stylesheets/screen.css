@@ -74,8 +74,7 @@ h4 {
   letter-spacing: 0.03em;
   color: black;
   text-transform: uppercase;
-  /*margin-top:0;
-  /*margin-bottom: 0;*/ }
+  /*margin-top:0;*/ }
 
 .site-logo {
   color: 900;
@@ -124,6 +123,10 @@ h4 {
     font-size: 150%; } }
 .red {
   color: #ff2a00; }
+
+.subline {
+  position: relative;
+  top: -22px!important; }
 
 /*---------- SELECTED TEXT COLOUR ----------*/
 ::selection {
@@ -305,8 +308,8 @@ nav {
 nav li {
   display: inline;
   list-style-type: none;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 11px;
   border-left: 1px solid #cccccc; }
 
 nav li:first-child {
@@ -681,7 +684,11 @@ h1, h2, h3 {
   /*padding:$padding-bp1 0 $padding-bp1 0;*/ }
 
 .grey-bg {
-  background-color: #333333;
+  background-color: #0a0a0a;
+  color: #cccccc;
+  /*padding:$padding-bp1 0 $padding-bp1 0;*/ }
+
+.grey-bg h1 {
   color: #f1f1f1;
   /*padding:$padding-bp1 0 $padding-bp1 0;*/ }
 
@@ -720,17 +727,17 @@ img.bg {
     /* 50% */ } }
 /* ---------- About ------------ */
 .about {
-  background-color: black;
+  background-color: #ff2a00;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 3;
   color: white;
-  opacity: 0.90;
+  opacity: 0.97;
   font-size: 120%; }
 
 .about a {
-  /*color: black!important;*/ }
+  color: black!important; }
 
 .show {
   visibility: visible!important; }
