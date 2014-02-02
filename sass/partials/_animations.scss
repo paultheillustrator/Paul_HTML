@@ -21,7 +21,7 @@ animation-timing-function: ease-in-out;
 100% {opacity: 0.93;}
 }
 
-/*-----FadeIn------*/
+/*-----FadeOut------*/
 
 .fadeOut{
 animation:fadeOut 0.1s;
@@ -116,23 +116,43 @@ animation-timing-function: ease-in-out;
 /*-----PopIn------*/
 
 .popIn{
-animation:popIn 2s infinite;
+animation:popIn 0.5s;
 animation-timing-function: ease-in-out;
--webkit-animation:popIn 1s; /* Safari and Chrome */
+-webkit-animation:popIn 0.5s; /* Safari and Chrome */
 }
 
 @keyframes popIn
 {
-0% {height: auto; width:0%; -webkit-filter: blur(10px);}
-80% {height: auto; width:85%; -webkit-filter: blur(10px);}
-100% {height: auto; width:60%; -webkit-filter: blur(0px);}
+0% {height: auto; width: 0;}
+90% {height: auto; width: 120%;}
+100% {height: auto; width: 100%;}
 }
 
 @-webkit-keyframes popIn /* Safari and Chrome */
 {
-0% {height: auto; width:0%; -webkit-filter: blur(10px);}
-80% {height: auto; width:85%; -webkit-filter: blur(10px);}
-100% {height: auto; width:60%; -webkit-filter: blur(0px);}
+0% {height: auto; width: 0;}
+90% {height: auto; width: 120%;}
+100% {height: auto; width: 100%;}
+}
+
+/*-----Rotate------*/
+
+.rotate{
+animation:rotate 2s;
+animation-timing-function: ease-in-out;
+-webkit-animation:rotate 2s; /* Safari and Chrome */
+}
+
+@keyframes rotate
+{
+0% {height: auto; width:0%; transform:rotate(90deg);}
+100% {height: auto; width:60%; transform:rotate(0deg);}
+}
+
+@-webkit-keyframes rotate /* Safari and Chrome */
+{
+0% {height: auto; width:0%; -webkit-transform:rotate(90deg);}
+100% {height: auto; width:60%; -webkit-transform:rotate(0deg);}
 }
 
 /*----- Upside Down (not really an animation) ----*/

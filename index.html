@@ -26,6 +26,7 @@
 		<div id="landing_wrap">
 			<!-- ABOUT SECTION -->	
 			<div class="about hide table">
+				<div class="cross">X</div>
 				<div class="container no-bg table-cell">
 					<section class="opening-paragraph">
 						Hello fuckers.<br><br>
@@ -39,8 +40,7 @@
 			<!-- NAVIGATION -->
 			<nav>
 				<ul>
-				<li><a href="#">Blog</a></li>
-					<li class="about-link"><a href="#">About</a></li>
+					<li class="about-link"><a href="#">Who?</a></li>
 				</ul>
 			</nav>
 
@@ -53,7 +53,7 @@
 
 		</div><!-- End landing_wrap -->
 		
-		<div class="center upAndDown">
+		<div class="center">
 			<div id="read-more">
 				More bollox
 			</div>
@@ -199,12 +199,12 @@
 
 		<!-- Show / hide About page JS -->
 		<script>
-		$( ".about-link").click(function() {
-		  $(".about").removeClass( "fadeOut" ).toggleClass( "show fadeIn" );
-		});
-		$( ".about").click(function() {
-		  $(".about").removeClass( "show fadeIn" ).toggleClass( "fadeOut" );
-		});
+			$( ".about-link").click(function() {
+			  $(".about").removeClass( "fadeOut" ).toggleClass( "show fadeIn" );
+			});
+			$( ".about").click(function() {
+			  $(".about").removeClass( "show fadeIn" ).toggleClass( "fadeOut" );
+			});
 		</script>
 
 		<!-- Fade as you Scroll down -->

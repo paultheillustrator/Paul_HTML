@@ -135,6 +135,13 @@ html, body{
 	letter-spacing: -1px;
 	line-height: 120%;
 	max-width: 1200px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px){
+	.opening-paragraph{
+	font-size: 150%;
+}
 }
 
 .red{

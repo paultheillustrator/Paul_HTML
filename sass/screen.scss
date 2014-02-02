@@ -236,17 +236,18 @@ img.bg {
 
 /* ---------- About ------------ */
 .about{
-	background-color: $grey-darkest;
+	background-color: black;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: 3;
 	color: white;
-	opacity: 0.93;
+	opacity: 0.90;
+	font-size: 120%;
 }
 
 .about a{
-	
+	/*color: black!important;*/
 }
 
 .show{
@@ -255,6 +256,38 @@ img.bg {
 
 .hide{
 	visibility:hidden;
+}
+
+.cross{
+	display: block;
+	text-indent: -9999px;
+	min-width:38px;
+	min-height:38px;
+	position: absolute;
+  	right: 1.2em;
+  	top: 1.1em;
+  	z-index: 1;
+  	cursor: pointer;
+  	background: url(../images/svg/cross_large.svg);
+  	background-size: 38px;
+  	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 500px){
+	.cross{
+	display: block;
+	text-indent: -9999px;
+	min-width:30px;
+	min-height:30px;
+	position: absolute;
+  	right: 1.2em;
+  	top: 1.1em;
+  	z-index: 1;
+  	cursor: pointer;
+  	background: url(../images/svg/cross_small.svg);
+  	background-size: 30px;
+  	background-repeat: no-repeat;
+}
 }
 
 /******/

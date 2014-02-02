@@ -79,18 +79,3 @@ $basic-color:black;
 	display: table-cell;
 	vertical-align: middle;
 }
-
-// Link styles
-a:link {
-	text-decoration: none;
-	color: $red;
-}
-
-a:hover {
-	color: $red-dark;
-	text-decoration: underline;
-}
-
-a:visited{
-	color: $red;
-}
