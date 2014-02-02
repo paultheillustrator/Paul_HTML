@@ -236,16 +236,17 @@ img.bg {
 
 /* ---------- About ------------ */
 .about{
-	background-color: $red;
+	background-color: $grey-darkest;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: 3;
 	color: white;
+	opacity: 0.93;
 }
 
 .about a{
-	color:white!important;
+	
 }
 
 .show{

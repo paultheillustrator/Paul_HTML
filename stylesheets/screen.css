@@ -505,7 +505,7 @@ nav li a {
 @import "vendor/jquery.ui.core";*/
 html, body {
   line-height: 1.6em;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   color: #444444;
   height: 100%;
   background-color: white; }
@@ -655,15 +655,13 @@ img.bg {
     /* 50% */ } }
 /* ---------- About ------------ */
 .about {
-  background-color: #ff2a00;
+  background-color: #0a0a0a;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 3;
-  color: white; }
-
-.about a {
-  color: white!important; }
+  color: white;
+  opacity: 0.93; }
 
 .show {
   visibility: visible!important; }
