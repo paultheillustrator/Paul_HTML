@@ -25,12 +25,13 @@
 	<body>
 		<div id="landing_wrap">
 			<!-- ABOUT SECTION -->	
-			<div class="about hide">
-				<div class="container no-bg">
+			<div class="about hide table">
+				<div class="container no-bg table-cell">
 					<section class="opening-paragraph">
 						Hello fuckers.<br><br>
 						Herein lies the website of Paul, designer director at <a href="http://edenspiekermann.com" target="blank">Edenspiekermann</a>. I make things that are exciting, useful and occasionally offensive. I also write about these things.<br><br>
-						Farewell.
+						Farewell.<br>
+						<a href="http://twitter.com/paulillustrator" target="blank">@paulillustrator</a>
 					</section><!-- End intro section -->
 				</div><!-- End container -->
 			</div><!-- End about-wrap -->
@@ -58,12 +59,15 @@
 			</div>
 		</div><!-- End center -->
 
-		<div class="container no-bg opening-paragraph">
-				Hello fuckers.<br><br>
-				Herein lies the website of Paul, designer director at <a href="http://edenspiekermann.com" target="blank">Edenspiekermann</a>. I make things that are exciting, useful and occasionally offensive. I also write about these things.<br><br>
-				Farewell. 	
-		</div><!-- End container -->
-
+		<div class="container white-bg">
+				<h1>Intro block</h1>
+				<article class="intro">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit eu magna eget imperdiet. Mauris rhoncus pretium laoreet. Donec pharetra metus arcu, vel pretium nisi venenatis id. Vestibulum molestie purus sed mi tristique. <a href="#">Here is a link within a passage of text</a> ullamcorper turpis bibendum. Maecenas vitae nulla dui. Donec vestibulum purus justo, sit amet volutpat sapien tristique id. Aliquam luctus purus quis fringilla placerat. Fusce id nisl non magna accumsan adipiscing. Mauris tincidunt semper nisl, nec molestie enim auctor euismod. Donec blandit libero ac est dictum mollis. Proin vel pulvinar arcu. Aenean vehicula a augue nec mattis. Sed tempor tortor tortor, non accumsan quam dictum luctus.
+					<br><br>	
+					<a href="#" class="button">View work</a>
+				</article>
+		</div><!-- End container white-bg -->
+		
 		<div class="container no-bg">
 				<h1>Recent projects</h1>
 				<div class="grid-wrap">
@@ -193,17 +197,18 @@
 		<!-- Start FitText -->
 		<script src="js/jquery.fittext.js"></script>
 
-		<!-- Show / hide JS -->
+		<!-- Show / hide About page JS -->
 		<script>
 		$( ".about-link").click(function() {
-		  $(".about").toggleClass( "show" );
+		  $(".about").removeClass( "fadeOut" ).toggleClass( "show fadeIn" );
+		});
+		$( ".about").click(function() {
+		  $(".about").removeClass( "show fadeIn" ).toggleClass( "fadeOut" );
 		});
 		</script>
 
-		<script>
-		$( ".about").click(function() {
-		  $(".about").toggleClass( "show" );
-		});
+		<!-- Fade as you Scroll down -->
+		<script type="text/javascript">
 		</script>
 
 		<!-- Fit Text JS -->

@@ -70,6 +70,16 @@ $basic-color:black;
   	margin-right: auto;
 }
 
+.table{
+	display: table;
+	vertical-align: middle;
+}
+
+.table-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+
 // Link styles
 a:link {
 	text-decoration: none;
