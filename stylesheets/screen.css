@@ -304,7 +304,7 @@ a:visited {
 nav {
   position: fixed;
   right: 2em;
-  z-index: 2; }
+  z-index: 1; }
 
 nav li {
   display: inline;
@@ -659,7 +659,7 @@ img.bg {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   color: white; }
 
 .about a {
