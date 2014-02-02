@@ -118,7 +118,8 @@ h4 {
 .opening-paragraph {
   font-size: 175%;
   letter-spacing: -1px;
-  line-height: 120%; }
+  line-height: 120%;
+  display: table-cell; }
 
 .red {
   color: #ff2a00; }
