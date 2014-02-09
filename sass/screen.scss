@@ -114,7 +114,7 @@ h1, h2, h3 {
 #landing_wrap{
 	width: 100%;
 	height: 100%;
-	background-color: $grey-lightest;
+	background-color: $red;
 	background-size: cover;
 	display:table;
 	position: relative;
@@ -242,18 +242,18 @@ img.bg {
 
 /* ---------- About ------------ */
 .about{
-	background-color: $red;
+	background-color: black;
 	height: 100%;
 	width: 100%;
 	position: fixed;
 	z-index: 3;
 	color: white;
-	opacity: 0.97;
+	opacity: 0.95;
 	font-size: 120%;
 }
 
 .about a{
-	color: black!important;
+	color: $red!important;
 }
 
 .show{

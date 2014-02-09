@@ -68,7 +68,7 @@ h4{
 	font-family: $header-font-family;
 	font-weight: $black;
 	letter-spacing: 0.03em;
-	color: black;
+	color: white;
 	text-transform: uppercase;
 	/*margin-top:0;*/
 }
@@ -146,6 +146,11 @@ html, body{
 .red{
 	color: $red;
 }
+
+.black{
+	color: black;
+}
+
 
 .subline{
 	position:relative;
