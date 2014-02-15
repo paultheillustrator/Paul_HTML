@@ -21,6 +21,18 @@
 		<!-- Apple Touch / Windows 8 icons -->
 		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 		<meta name="msapplication-square310x310logo" content="images/touch_icons/largetile.png" />
+		
+		<!-- Fade out as scroll -->
+		<script>
+				$(window).scroll(function() {
+		    if ($(this).scrollTop() > 400) {
+		        $( "" ).fadeIn();
+		    } else {
+		        console.log('there');
+		        $( "#read-more" ).fadeOut();
+		    }
+		});
+		</script>
 	</head>
 	<body>
 		<div id="landing_wrap">
@@ -62,33 +74,43 @@
 		</div><!-- End center -->
 
 		<div class="container white-bg">
-				<h1>Intro block</h1>
+				<h1>Greetings</h1>
 				<article class="intro">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit <a href="#">Here is a link within a passage of text</a> eu magna eget imperdiet. Mauris rhoncus pretium laoreet. Donec pharetra metus arcu, vel pretium nisi venenatis id. Vestibulum molestie purus sed mi tristique.  ullamcorper turpis bibendum. Maecenas vitae nulla dui.<br><br>
-					<a href="#" class="button">View work</a>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit <a href="#">Here is a link within a passage of text</a> eu magna eget imperdiet. Mauris rhoncus pretium laoreet. Donec pharetra metus arcu, vel pretium nisi venenatis id. Vestibulum molestie purus sed mi tristique.  ullamcorper turpis bibendum. Maecenas vitae nulla dui.
 				</article>
 		</div><!-- End container white-bg -->
 		
-		<div class="container no-bg">
-				<h1>Recent projects</h1>
-				<div class="grid-wrap">
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_partnerships_thumb.jpg">
+		<div class="no-bg">
+				<div class="grid-wrap no-gutter">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_partnerships_thumb.jpg">
+						</a>
 					</div>
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_rbma_thumb.jpg">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_rbma_thumb.jpg">
+						</a>
 					</div>
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_mine_thumb.jpg">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_design-thinking_thumb.jpg">
+						</a>
 					</div>
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_design-thinking_thumb.jpg">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_mine_thumb.jpg">
+						</a>
 					</div>
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_calendar_thumb.jpg">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_dit_thumb.jpg">
+						</a>
 					</div>
-					<div class="grid-col three-up">
-						<img src="images/projects/thumbs/project_warmups_thumb.jpg">
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="images/projects/thumbs/project_calendar_thumb.jpg">
+						</a>
 					</div>
 				</div><!-- End grid-col three-up -->
 		</div><!-- End container no-bg -->

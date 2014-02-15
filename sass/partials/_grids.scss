@@ -1,28 +1,57 @@
-//Grids
+//WIDTHS
 
-$large-column: 3em;
-$small-column: 1em;
+.no-gutter{
+    padding-left:0px!important;
+    margin:0px!important;
+    padding:0px!important;
+    margin-bottom: -10px!important;
+}
 
 .grid-wrap {
-	margin-left: -1em;
     overflow: hidden;
     clear: both;
     padding-bottom: $padding-bp1;
+    z-index:100;
 } 
 
 .grid-col {
-	float:left;
+    float:left;
     text-align: left;
-	padding-left: 1em; /* this is your gutter between columns */
+    width: 100%;
+}   
+
+@media screen and (min-width: 900px){
+    .grid-wrap {
+    margin-left: -2em;
+    overflow: hidden;
+    clear: both;
+    padding-bottom: $padding-bp1;
+    z-index:100;
+} 
+
+.grid-col {
+    float:left;
+    text-align: left;
+    padding-left: 2em; /* gutter */
     width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box; 
     padding-bottom: 1em;
+}   
 }
 
 .grid-col img{
     width: 100%;
+    border:none;
+}
+
+.one-up{
+    width: 75%;
+}
+
+.prose{
+    max-width: 36em;
 }
 
 .two-up{
@@ -36,7 +65,6 @@ $small-column: 1em;
 .four-up{
     width: 25%;
 }
-
 
 @media screen and (min-width: 481px) and (max-width: 900px){
 
@@ -68,7 +96,7 @@ $small-column: 1em;
     padding-bottom: $padding-bp3;
 } 
     .grid-col img{
-	width: 100%;
+    width: 100%;
 }
     .grid-col {
     float:left;
@@ -82,14 +110,14 @@ $small-column: 1em;
     width: 50%;
 }
 .three-up{
-     width: 50%;
+     width: 100%;
 }
 }
 
 
 @media screen and (min-width: 481px) and (max-width: 900px){
 .four-up {
-	width:50%;
+    width:50%;
 }
 
 .three-up {
