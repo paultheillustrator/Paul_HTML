@@ -17,7 +17,9 @@
 @import "partials/link_styles";
 @import "partials/animations";
 @import "partials/mixins";
-@import "partials/_holding_page";
+@import "partials/holding_page";
+@import "partials/helpers";
+@import "partials/inside_page";
 // 
 
 // Third-party
@@ -29,7 +31,7 @@ html, body{
 	letter-spacing: $base-letter-spacing;
 	color: $base-font-color;
 	height:100%;
-	background-color: white;
+	background-color: $grey-lightester;
 }
 
 @media screen and (min-width: 769px){
@@ -97,7 +99,7 @@ h1, h2, h3 {
 }
 
 .intro{
-	max-width:25em;
+	max-width:30em;
 	margin: 0 auto;
 	/*padding: 2em 0 2em 0;*/
 	padding-bottom: $padding-bp1;

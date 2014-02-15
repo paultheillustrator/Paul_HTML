@@ -1,6 +1,7 @@
 //Base styles
 
 //Colours
+$grey-lightester: #fafafa;
 $grey-lightest: #f1f1f1;
 $grey-light: #cccccc;
 $grey-medium: #666666;
@@ -12,7 +13,6 @@ $red: #ff2a00;
 $red-dark: #b41e00;
 $blue: #00c0ff;
 $yellow: #ffea00;
-
 
 // Font weights
 $light: 100;
@@ -61,21 +61,3 @@ $basic-color:black;
 @mixin breakpoint_desktop {@media screen and (min-width: 768px) and (max-width: 1300px)}
 @mixin breakpoint_desktop_wide {@media screen and screen and (min-width: 1301px)}
 */
-
-// Helpers
-
-.center{
-	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-}
-
-.table{
-	display: table;
-	vertical-align: middle;
-}
-
-.table-cell{
-	display: table-cell;
-	vertical-align: middle;
-}

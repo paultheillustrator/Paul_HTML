@@ -1,0 +1,28 @@
+// Inside page styles
+
+/*----------- INSIDE_HERO ------------*/
+#landing_wrap--inside{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	display:table;
+	position: relative;
+	color: white;
+}
+/*------------------HERO--------------*/
+.hero--inside{
+	display: table-cell!important;
+}
+
+#landing_wrap--inside h1{
+	color: white;
+	line-height: 1em;
+	margin-top: 0;
+}
+
+/*-------------PROJECT SPECIFIC CLASSES---------------*/
+
+.head_bg--showreel{
+	/*background-color: #171717;*/
+	background-color: #111418;
+}
