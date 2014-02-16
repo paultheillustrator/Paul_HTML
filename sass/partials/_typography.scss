@@ -158,6 +158,56 @@ html, body{
 	top: -22px!important;
 }
 
+/*---------- CENTERED STATEMENT TEXTS ----------*/
+
+.statement{
+	text-align: center;
+	font-size: 220%;
+	letter-spacing: -1px;
+	line-height: 120%;
+	max-width: 25em;
+	margin: 0 auto;
+	margin-bottom: 1em;
+	
+}
+
+.statement:after{
+	
+	position: absolute;
+    content:'';
+    height: 5px;
+    width: 3em;
+    background-color: rgba(255,255,255,0.1);
+    text-align: center;
+    display: block;
+    margin: 2em auto 1em;
+    position: relative;
+}
+
+.statement-header{
+	font-family:$header-font-family;
+	text-align: center;
+	font-weight: $black!important;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 0.75em;
+	margin-top: 3em;
+}
+
+
+/*----INLINE QUOTES---*/
+
+.inline-quote{
+	border-left: $red solid 6px;
+	padding-left: 1em;
+	font-size: 145%;
+	margin-top: 1.5em;
+	margin-bottom:1.5em;
+	letter-spacing: -0.03em;
+	font-style: italic;
+} 
+
+
 
 /*---------- SELECTED TEXT COLOUR ----------*/
 ::selection {

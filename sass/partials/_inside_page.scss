@@ -22,7 +22,38 @@
 
 /*-------------PROJECT SPECIFIC CLASSES---------------*/
 
+// Showreel
+
+$showreel-primary-color: $red;
+
+.body_bg--showreel{
+	background-color: #111418;
+	color: white;
+}
+
 .head_bg--showreel{
 	/*background-color: #171717;*/
-	background-color: #111418;
+	background-color: #181c21;
 }
+
+.yellow_showreel{
+	color: $showreel-primary-color;
+}
+
+.intro:first-child:first-letter { 
+	float: left; 
+	color: $showreel-primary-color; 
+	font-size: 4em; 
+	line-height: 60px; 
+	padding-top: 15px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: $header-font-family; }
+
+// DIT
+
+
+// Consider This
+
+
+//
