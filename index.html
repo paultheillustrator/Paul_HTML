@@ -33,6 +33,15 @@
 		    }
 		});
 		</script>
+
+		<!-- Preload and fade in images -->
+		<script>
+			// this function must be defined in the global scope
+				function fadeIn(obj) {
+				    $(obj).fadeIn(1000);
+				}
+		</script>
+
 	</head>
 	<body>
 		<div id="landing_wrap">
@@ -42,7 +51,7 @@
 				<div class="container no-bg table-cell">
 					<section class="opening-paragraph">
 						Hello fuckers.<br><br>
-						Herein lies the website of Paul, designer director at <a href="http://edenspiekermann.com" target="blank">Edenspiekermann</a>. I make things that are exciting, useful and occasionally offensive. I also write about these things.<br><br>
+						Herein lies the website of Paul, designer director at Edenspiekermann. I make things that are exciting, useful and occasionally offensive. I also write about these things.<br><br>
 						Farewell.<br>
 						<a href="http://twitter.com/paulillustrator" target="blank">@paulillustrator</a>
 					</section><!-- End intro section -->
@@ -53,14 +62,14 @@
 			<nav>
 				<ul>
 					<li><a href="/">Home</a></li>
-					<li><a href="#">Projects</a></li>
+					<li><a href="/projects">Projects</a></li>
 					<li class="about-link"><a href="#">Me</a></li>
 				</ul>
 			</nav>
 
 			<!-- MAIN STAGE -->
 			<div class="hero fadeInUp">
-				<img src="./images/hero-01.png">
+				<img id="preload" onload="fadeIn(this)" style="opacity:0;" src="./images/hero-01.png">
 				<h1 id="giant">WANKER</h1>
 				<span class="black subline">Professional cunt since 1983.</span>
 			</div><!-- End hero -->
@@ -230,10 +239,6 @@
 			$( ".about").click(function() {
 			  $(".about").removeClass( "show fadeIn" ).toggleClass( "fadeOut" );
 			});
-		</script>
-
-		<!-- Fade as you Scroll down -->
-		<script type="text/javascript">
 		</script>
 
 		<!-- Fit Text JS -->

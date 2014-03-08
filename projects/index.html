@@ -1,0 +1,124 @@
+<!doctype html>
+<!--[if lt IE 8]><html class="lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Paul Woods | Designer, illustrator, blogger and wanker</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<!-- CSS -->
+		<link href="../stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+		<!-- Javascript -->
+		<script src="../js/modernizr.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/evz6ssi.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!-- Apple Touch / Windows 8 icons -->
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+		<meta name="msapplication-square310x310logo" content="images/touch_icons/largetile.png" />
+		
+		<!-- Fade out as scroll -->
+		<script>
+				$(window).scroll(function() {
+		    if ($(this).scrollTop() > 400) {
+		        $( "" ).fadeIn();
+		    } else {
+		        console.log('there');
+		        $( "#read-more" ).fadeOut();
+		    }
+		});
+		</script>
+
+		<!-- Preload and fade in images -->
+		<script>
+			// this function must be defined in the global scope
+				function fadeIn(obj) {
+				    $(obj).fadeIn(1000);
+				}
+		</script>
+
+	</head>
+	<body>
+			<!-- NAVIGATION -->
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="#">Projects</a></li>
+					<li class="about-link"><a href="#">Me</a></li>
+				</ul>
+			</nav>
+
+		<div class="container">
+			<div class="grid-wrap no-gutter">
+					<h1>Projects</h1>
+					<article class="intro">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit eu magna eget imperdiet. Mauris rhoncus pretium laoreet.
+					</article>
+			</div><!-- End container white-bg -->
+		</div>
+
+		<div class="no-bg">
+				<div class="grid-wrap no-gutter">
+					<div class="grid-col three-up no-gutter">
+						<a href="inside-page.html">
+							<img src="../images/projects/thumbs/project_partnerships_thumb.jpg">
+						</a>
+					</div>
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="../images/projects/thumbs/project_rbma_thumb.jpg">
+						</a>
+					</div>
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="../images/projects/thumbs/project_design-thinking_thumb.jpg">
+						</a>
+					</div>
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="../images/projects/thumbs/project_mine_thumb.jpg">
+						</a>
+					</div>
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="../images/projects/thumbs/project_dit_thumb.jpg">
+						</a>
+					</div>
+					<div class="grid-col three-up no-gutter">
+						<a href="#">
+							<img src="../images/projects/thumbs/project_calendar_thumb.jpg">
+						</a>
+					</div>
+				</div><!-- End grid-col three-up -->
+		</div><!-- End container no-bg -->
+
+
+		<!-- Start FitText -->
+		<script src="js/jquery.fittext.js"></script>
+
+		<!-- Show / hide About page JS -->
+		<script>
+			$( ".about-link").click(function() {
+			  $(".about").removeClass( "fadeOut" ).toggleClass( "show fadeIn" );
+			});
+			$( ".about").click(function() {
+			  $(".about").removeClass( "show fadeIn" ).toggleClass( "fadeOut" );
+			});
+		</script>
+
+		<!-- Fade as you Scroll down -->
+		<script type="text/javascript">
+		</script>
+
+		<!-- Fit Text JS -->
+		<script type="text/javascript">
+			$("#giant").fitText(1.1, { minFontSize: '50px', maxFontSize: '300px' });
+		</script><!-- End Fit Text -->
+
+	</body>
+</html>

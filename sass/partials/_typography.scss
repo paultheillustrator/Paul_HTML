@@ -2,6 +2,7 @@
 
 html, body{
 	font-size: 112%;
+	-webkit-font-smoothing: antialiased;
 }
 
 
@@ -168,8 +169,20 @@ html, body{
 	max-width: 25em;
 	margin: 0 auto;
 	margin-bottom: 1em;
-	
 }
+
+@media screen and (max-width:980px){
+	.statement{
+		font-size: 175%;
+	}
+}
+
+@media screen and (max-width:580px){
+	.statement{
+		font-size: 125%;
+	}
+}
+
 
 .statement:after{
 	
