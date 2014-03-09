@@ -7,6 +7,10 @@
   display: inline-block;
 }
 
+.nav-wrap--inside a{
+  color: $grey-dark!important;
+}
+
 .nav-wrap--inside{
   width: 100%;
   z-index: 1;

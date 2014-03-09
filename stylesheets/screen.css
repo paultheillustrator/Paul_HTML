@@ -335,6 +335,9 @@ h4 {
   z-index: 1;
   display: inline-block; }
 
+.nav-wrap--inside a {
+  color: #333333 !important; }
+
 .nav-wrap--inside {
   width: 100%;
   z-index: 1;
@@ -394,6 +397,9 @@ a:active {
 .red-hover a:hover {
   background-color: #ff2a00; }
 
+/*img:hover{
+	opacity: 0.7;
+}*/
 /*-----FadeIn------*/
 .fadeIn {
   animation: fadeIn 0.1s;
@@ -747,6 +753,11 @@ span.text-content {
 
 .img-list:hover span.text-content {
   opacity: 1; }
+
+footer {
+  font-size: 0.65em;
+  color: #666666;
+  text-align: center; }
 
 /*@import "vendor/_proportional-grids.scss";
 @import "vendor/jquery.ui.core";*/
