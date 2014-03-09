@@ -28,7 +28,7 @@
 
 /*-------------PROJECT SPECIFIC CLASSES---------------*/
 
-// Showreel
+/*--Showreel--*/
 
 $showreel-primary-color: $red;
 
@@ -56,7 +56,7 @@ $showreel-primary-color: $red;
 	padding-left: 3px; 
 	font-family: $header-font-family; }
 
-// Design Thinking
+/*-- Design Thinking --*/
 
 .body_bg--design_thinking{
 	background-color: $grey-lightester;
@@ -66,6 +66,10 @@ $showreel-primary-color: $red;
 .head_bg--design_thinking{
 	/*background-color: #171717;*/
 	background-color: white;
+}
+
+#project_header--design-thinking{
+	color: $grey-darkest!important;
 }
 
 
