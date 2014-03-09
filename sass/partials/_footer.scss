@@ -2,6 +2,31 @@
 
 footer{
 	font-size: 0.65em;
-	color: $grey-medium;
+	color: $grey-light;
 	text-align: center;
+	margin: 0 auto;
+	line-height: 1.2em;
+	padding:2em;
+}
+
+.footer_wrap{
+	max-width: 50em;
+}
+
+.footer_wrap ul, li{
+	display: inline;
+	list-style:none;
+}
+
+.footer_wrap img{
+	width: 80px;
+	height: auto;
+}
+
+@media screen and (max-width: 768px){
+
+.footer_wrap img{
+	width: 60px;
+	height: auto;
+}
 }

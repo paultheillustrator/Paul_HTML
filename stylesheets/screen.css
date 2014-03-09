@@ -397,9 +397,6 @@ a:active {
 .red-hover a:hover {
   background-color: #ff2a00; }
 
-/*img:hover{
-	opacity: 0.7;
-}*/
 /*-----FadeIn------*/
 .fadeIn {
   animation: fadeIn 0.1s;
@@ -756,9 +753,27 @@ span.text-content {
 
 footer {
   font-size: 0.65em;
-  color: #666666;
-  text-align: center; }
+  color: #cccccc;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.2em;
+  padding: 2em; }
 
+.footer_wrap {
+  max-width: 50em; }
+
+.footer_wrap ul, li {
+  display: inline;
+  list-style: none; }
+
+.footer_wrap img {
+  width: 80px;
+  height: auto; }
+
+@media screen and (max-width: 768px) {
+  .footer_wrap img {
+    width: 60px;
+    height: auto; } }
 /*@import "vendor/_proportional-grids.scss";
 @import "vendor/jquery.ui.core";*/
 html, body {
