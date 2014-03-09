@@ -34,3 +34,63 @@ span.text-content {
 .img-list:hover span.text-content {
   opacity: 1;
 }
+
+/*.coming-soon{
+ background:rgba(0,0,0,0.6);
+  opacity: 0.2;
+}*/
+
+
+
+.project--thumb {
+    position:relative;
+    /*width:200px;
+    height:200px;*/
+    font-family: $header-font-family;
+    text-transform: uppercase;
+    font-size: 125%;
+}
+
+@media screen and (max-width: 480px){
+  .project--thumb {
+    position:relative;
+    font-size: 100%;
+}
+
+.project--thumb:after, .project--thumb:before {
+    position:absolute;
+    top:20%;
+  }
+
+}
+.project--thumb img {
+    width:100%;
+    vertical-align:top;
+}
+.project--thumb:after, .project--thumb:before {
+    position:absolute;
+    top:48%;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.project--thumb:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+}
+.project--thumb:before {
+    content: attr(data-content);
+    width:100%;
+    color:#fff;
+    z-index:1;
+    bottom:0;
+    padding:4px 10px;
+    text-align:center;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.project--thumb:hover:after, .project--thumb:hover:before {
+    opacity:1;
+}
