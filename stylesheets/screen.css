@@ -62,7 +62,7 @@ h4 {
   margin-bottom: 0.3em;*/ }
 
 .site-logo {
-  color: white;
+  color: #0a0a0a;
   font-family: "scrawlregular", sans-serif;
   font-weight: 100;
   margin-top: 0;
@@ -335,8 +335,14 @@ h4 {
   z-index: 1;
   display: inline-block; }
 
+.nav-wrap--inside {
+  width: 100%;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: -0.5em; }
+
 .nav-invert a {
-  color: black!important; }
+  color: white!important; }
 
 nav {
   float: right;
@@ -354,9 +360,15 @@ nav li:first-child  {
     border-left: 0 none;
 }*/
 nav li a {
-  font-size: 18px;
-  color: white!important; }
+  font-size: 18px; }
 
+@media screen and (max-width: 320px) {
+  nav li a {
+    font-size: 0.75em; }
+
+  .site-logo {
+    font-size: 1.5em;
+    padding-top: 2px; } }
 a:link {
   text-decoration: none;
   color: #ff2a00;
@@ -403,6 +415,17 @@ a:active {
 
   100% {
     opacity: 0.93; } }
+
+/* FadeIn with delays */
+.fadeIn2 {
+  animation: fadeIn 0.1s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: fadeInUp 0.1s;
+  /* Safari and Chrome */
+  -webkit-animation-timing-function: ease-out;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  /* Safari and Chrome */ }
 
 /*-----FadeOut------*/
 .fadeOut {
@@ -693,6 +716,37 @@ a:active {
 .head_bg--design_thinking {
   /*background-color: #171717;*/
   background-color: white; }
+
+span.text-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: auto;
+  width: 50%; }
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+span.text-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0; }
+
+.img-list:hover span.text-content {
+  opacity: 1; }
 
 /*@import "vendor/_proportional-grids.scss";
 @import "vendor/jquery.ui.core";*/

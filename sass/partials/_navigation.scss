@@ -4,12 +4,18 @@
   width: 100%;
   position: absolute;
   z-index: 1;
- 
   display: inline-block;
 }
 
-.nav-invert a {
-  color: black!important;
+.nav-wrap--inside{
+  width: 100%;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: -0.5em;
+}
+
+.nav-invert a{
+    color: white!important;
 }
 
 nav {
@@ -41,5 +47,14 @@ nav li:first-child  {
 
 nav li a {
   font-size: $base-font-size;
-    color: white!important;
+}
+
+@media screen and (max-width: 320px){
+  nav li a {
+  font-size: 0.75em;
+}
+.site-logo{
+  font-size: 1.5em;
+  padding-top: 2px;
+}
 }

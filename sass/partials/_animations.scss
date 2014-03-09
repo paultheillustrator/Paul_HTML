@@ -21,6 +21,17 @@ animation-timing-function: ease-in-out;
 100% {opacity: 0.93;}
 }
 
+/* FadeIn with delays */
+
+.fadeIn2{
+animation:fadeIn 0.1s;
+animation-timing-function: ease-in-out;
+-webkit-animation:fadeInUp 0.1s; /* Safari and Chrome */
+-webkit-animation-timing-function: ease-out;
+animation-delay:2s;
+-webkit-animation-delay:2s; /* Safari and Chrome */
+}
+
 /*-----FadeOut------*/
 
 .fadeOut{
